@@ -1,0 +1,116 @@
+
+/* Variables -start */
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+/* Variables -end */
+
+
+/* Global Rules -start */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very-light-gray);
+}
+
+/* Global Rules -end */
+
+/* components -start */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+section {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    border-radius: 6px;
+    overflow: hidden;
+}
+@media (max-width: 991px) {
+    section {
+        grid-template-columns: 300px;
+    }
+}
+
+
+article {
+    width: 300px;
+    height: 500px;
+    padding: 40px;
+}
+
+.left {
+    background-color: var(--Bright-orange);
+    color: var(--Bright-orange);
+}
+
+.center {
+    background-color: var(--Dark-cyan);
+    color: var(--Dark-cyan);
+}
+
+.right {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--Very-light-gray);
+    margin-top: 25px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+p {
+    margin-top: 25px;
+    color: var(--Transparent-white);
+    line-height: 2;
+    min-height: 160px;
+    max-width: 200px;
+}
+
+button {
+    width: 160px;
+    margin-top: 65px;
+    padding: 20px;
+    border: none;
+    border-radius: 90px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: inherit;
+    color: var(--Transparent-white);
+    border: 1px solid var(--Transparent-white);
+}
+
+/* components -end */
